@@ -1,0 +1,68 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ================================================================
+         الصلاحيات — كل صلاحية موثّقة بسبب وجودها.
+         لا صلاحيات إضافية دون تبرير واضح (مبدأ "الخصوصية أولاً").
+         ================================================================ -->
+
+    <!-- الزر العائم (OverlayService) — نافذة تظهر فوق التطبيقات الأخرى. -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- التقاط الشاشة (ScreenCaptureService عبر MediaProjection). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+
+    <!-- إلزامي على Android 13+ لعرض إشعار الخدمة الأمامية (Foreground Service). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- اختياري: تُستخدم فقط عند تفعيل طبقة OCR/AI السحابية الاختيارية
+         بموافقة صريحة من المستخدم (راجع AiAssistantService). لا اتصال
+         شبكي يحدث بدون هذه الموافقة. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:label="إقرا"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:fullBackupContent="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- TODO(Phase 2): تسجيل OverlayForegroundService وScreenCaptureService
+             هنا عند تنفيذهما الفعلي، كل منهما بـ android:foregroundServiceType
+             المناسب ("specialUse" أو "mediaProjection" على التوالي). -->
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+
+    <!-- يتطلبها Android 11+ (queries) إن احتجنا لفتح تطبيقات أخرى لاحقاً. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+</manifest>

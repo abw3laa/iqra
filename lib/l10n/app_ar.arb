@@ -1,0 +1,42 @@
+{
+  "@@locale": "ar",
+  "appName": "إقرا",
+  "@appName": {"description": "اسم التطبيق"},
+
+  "onboardingWelcomeTitle": "أهلاً بك في إقرا",
+  "onboardingWelcomeSubtitle": "مساعدك الذكي للقراءة، وفهم كل ما تراه.",
+  "onboardingStartButton": "ابدأ الآن",
+
+  "permissionsTitle": "إقرا يحتاج إذنك للمساعدة",
+  "permissionsSubtitle": "لنتمكن من قراءة الشاشة ومساعدتك في أي وقت، يرجى تفعيل هذه الإعدادات.",
+  "permissionsOverlayTitle": "الظهور فوق التطبيقات",
+  "permissionsOverlayDescription": "يسمح لنا بمساعدتك أينما كنت.",
+  "permissionsScreenReadingTitle": "قراءة محتوى الشاشة",
+  "permissionsScreenReadingDescription": "ضروري لنتعرف على الكلمات ونقرأها لك.",
+  "permissionsContinueButton": "المتابعة",
+
+  "homeWelcomeBack": "أهلاً بعودتك،",
+  "homeReadyToRead": "هل أنت جاهز للقراءة؟",
+  "homeTapToSpeak": "اضغط للتحدث",
+  "homeRecentReadings": "قراءاتك الأخيرة",
+  "homeSeeAll": "عرض الكل",
+
+  "navLibrary": "المكتبة",
+  "navListen": "استمع",
+  "navHistory": "السجل",
+  "navSettings": "الإعدادات",
+
+  "historyPageTitle": "سجل القراءة",
+  "historyPagePlaceholder": "سيظهر هنا سجل كل ما قرأه لك إقرا.",
+
+  "settingsPageTitle": "الإعدادات",
+  "settingsPagePlaceholder": "إعدادات اللغة، اللهجة، سرعة القراءة، والخصوصية ستظهر هنا.",
+
+  "helpPageTitle": "المساعدة",
+  "helpPagePlaceholder": "دليل استخدام إقرا خطوة بخطوة سيظهر هنا.",
+
+  "aboutPageTitle": "حول التطبيق",
+  "aboutPagePlaceholder": "سياسة الخصوصية والإصدار سيظهران هنا.",
+
+  "comingSoonMessage": "هذه الميزة قيد التطوير قريباً."
+}

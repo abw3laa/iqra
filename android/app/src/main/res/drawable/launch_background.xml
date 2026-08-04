@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- خلفية شاشة الإطلاق قبل رسم أول إطار Flutter — لون خلفية إقرا الفاتح
+     (IqraColors.background = #F9F9FF) لتفادي "وميض" أبيض/أسود مزعج. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+</layer-list>

@@ -1,0 +1,41 @@
+{
+  "@@locale": "tr",
+  "appName": "Iqra",
+
+  "onboardingWelcomeTitle": "Iqra'ya hoş geldiniz",
+  "onboardingWelcomeSubtitle": "Gördüğünüz her şeyi anlamanıza yardımcı olan akıllı okuma asistanınız.",
+  "onboardingStartButton": "Başla",
+
+  "permissionsTitle": "Iqra'nın yardımcı olabilmesi için izninize ihtiyacı var",
+  "permissionsSubtitle": "Ekranınızı okuyup her an size yardımcı olabilmemiz için lütfen bu ayarları etkinleştirin.",
+  "permissionsOverlayTitle": "Diğer uygulamaların üzerinde göster",
+  "permissionsOverlayDescription": "Nerede olursanız olun size yardımcı olmamızı sağlar.",
+  "permissionsScreenReadingTitle": "Ekran içeriğini oku",
+  "permissionsScreenReadingDescription": "Kelimeleri tanıyıp size okumamız için gereklidir.",
+  "permissionsContinueButton": "Devam Et",
+
+  "homeWelcomeBack": "Tekrar hoş geldiniz,",
+  "homeReadyToRead": "Okumaya hazır mısınız?",
+  "homeTapToSpeak": "Konuşmak için dokunun",
+  "homeRecentReadings": "Son Okumalar",
+  "homeSeeAll": "Tümünü gör",
+
+  "navLibrary": "Kitaplık",
+  "navListen": "Dinle",
+  "navHistory": "Geçmiş",
+  "navSettings": "Ayarlar",
+
+  "historyPageTitle": "Okuma Geçmişi",
+  "historyPagePlaceholder": "Iqra'nın size okuduğu her şey burada görünecek.",
+
+  "settingsPageTitle": "Ayarlar",
+  "settingsPagePlaceholder": "Dil, lehçe, okuma hızı ve gizlilik seçenekleri burada görünecek.",
+
+  "helpPageTitle": "Yardım",
+  "helpPagePlaceholder": "Iqra kullanımına ilişkin adım adım kılavuz burada görünecek.",
+
+  "aboutPageTitle": "Hakkında",
+  "aboutPagePlaceholder": "Gizlilik politikası ve sürüm bilgisi burada görünecek.",
+
+  "comingSoonMessage": "Bu özellik yakında geliyor."
+}

@@ -1,0 +1,41 @@
+{
+  "@@locale": "en",
+  "appName": "Iqra",
+
+  "onboardingWelcomeTitle": "Welcome to Iqra",
+  "onboardingWelcomeSubtitle": "Your smart reading companion, understanding everything you see.",
+  "onboardingStartButton": "Get Started",
+
+  "permissionsTitle": "Iqra needs your permission to help",
+  "permissionsSubtitle": "To read your screen and help you anytime, please enable these settings.",
+  "permissionsOverlayTitle": "Display over other apps",
+  "permissionsOverlayDescription": "Lets us help you wherever you are.",
+  "permissionsScreenReadingTitle": "Read screen content",
+  "permissionsScreenReadingDescription": "Needed to recognize words and read them to you.",
+  "permissionsContinueButton": "Continue",
+
+  "homeWelcomeBack": "Welcome back,",
+  "homeReadyToRead": "Ready to read?",
+  "homeTapToSpeak": "Tap to speak",
+  "homeRecentReadings": "Recent Readings",
+  "homeSeeAll": "See all",
+
+  "navLibrary": "Library",
+  "navListen": "Listen",
+  "navHistory": "History",
+  "navSettings": "Settings",
+
+  "historyPageTitle": "Reading History",
+  "historyPagePlaceholder": "Everything Iqra has read to you will appear here.",
+
+  "settingsPageTitle": "Settings",
+  "settingsPagePlaceholder": "Language, dialect, reading speed and privacy options will appear here.",
+
+  "helpPageTitle": "Help",
+  "helpPagePlaceholder": "A step-by-step guide to using Iqra will appear here.",
+
+  "aboutPageTitle": "About",
+  "aboutPagePlaceholder": "Privacy policy and version info will appear here.",
+
+  "comingSoonMessage": "This feature is coming soon."
+}

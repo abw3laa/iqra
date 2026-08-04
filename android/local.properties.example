@@ -1,0 +1,3 @@
+# انسخ هذا الملف باسم local.properties (غير مضاف لـ git) وحدّث المسارات:
+sdk.dir=/path/to/Android/sdk
+flutter.sdk=/path/to/flutter

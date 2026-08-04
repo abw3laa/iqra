@@ -1,0 +1,116 @@
+name: iqra
+description: >
+  إقرا (Iqra) — مساعد قراءة ذكي يساعد الأشخاص الذين يجدون صعوبة في القراءة
+  على فهم أي نص يظهر على شاشة هاتفهم، بخصوصية كاملة وسهولة استخدام قصوى.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.27.0'
+
+# ---------------------------------------------------------------------------
+# ملاحظة اختيار الحزم (Package Selection Notes)
+# ---------------------------------------------------------------------------
+# - state_management + DI: flutter_riverpod فقط (بدون riverpod_generator في
+#   هذه المرحلة) لتجنّب اعتماد المشروع على build_runner قبل أن تُختبر بيئة
+#   البناء الكاملة لديك. يمكن الانتقال لاحقاً إلى @riverpod codegen بسهولة.
+# - routing: go_router (لا يزال الخيار الأنسب والأكثر نضجاً في Flutter، لا
+#   يوجد بديل أحدث يستحق الاستبدال حالياً).
+# - localization: الحل الرسمي من Flutter (gen-l10n + ARB files) بدل
+#   easy_localization/slang المقترحين سابقاً — القرار محدّث وتم اختياره لأنه:
+#   1) مدعوم رسمياً من فريق Flutter ولا يعتمد على حزمة طرف ثالث قد تتوقف.
+#   2) Type-safe بالكامل عبر AppLocalizations المولّدة تلقائياً.
+#   3) لا يحتاج build_runner أو خطوة توليد يدوية (يعمل تلقائياً مع flutter pub get).
+# - local database: drift (بدل sqflite الخام) لأمان الأنواع وسهولة الـ migrations
+#   عند توسّع سجل القراءة لاحقاً.
+# - تخزين تفضيلات بسيطة: shared_preferences.
+# ---------------------------------------------------------------------------
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+
+  # State management + DI
+  flutter_riverpod: ^2.5.1
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Networking (used by future AiAssistantService / cloud OCR layer)
+  dio: ^5.5.0
+
+  # Local persistence
+  drift: ^2.19.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  shared_preferences: ^2.3.2
+
+  # Permissions (Overlay / Accessibility gateway screens)
+  permission_handler: ^11.3.1
+
+  # Background service scaffolding (used by OverlayService/ScreenCaptureService later)
+  flutter_background_service: ^5.0.10
+
+  # Text-to-speech (TtsService implementation target — interface only in Phase 1)
+  flutter_tts: ^4.1.0
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.12
+  drift_dev: ^2.19.0
+
+flutter:
+  uses-material-design: true
+
+  # يُفعّل توليد AppLocalizations تلقائياً من ملفات lib/l10n/*.arb عند تشغيل
+  # `flutter pub get` (وفق إعدادات l10n.yaml في جذر المشروع).
+  generate: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    # -------------------------------------------------------------------
+    # خطوط Design System (من DESIGN.md الخاص بـ Stitch):
+    #   - Be Vietnam Pro  → اللاتينية (إنجليزي/تركي) — ملفات ثابتة لكل وزن.
+    #   - Noto Sans Arabic → العربية (موثّق في iqra_ux_strategy_case_study.md)
+    #     — يُوزَّع اليوم كخط متغيّر (Variable Font) بمحور wght واحد فقط،
+    #     لذلك يُستخدم نفس الملف لعدة أوزان (تقنية Flutter الرسمية لدعم
+    #     الخطوط المتغيّرة: نفس asset مكرر بقيم weight مختلفة).
+    # كلا الخطين مرخّصان بموجب SIL Open Font License 1.1 (مصدرهما مستودع
+    # google/fonts الرسمي)، ومضمّنان فعلياً في هذا التسليم.
+    # -------------------------------------------------------------------
+    - family: BeVietnamPro
+      fonts:
+        - asset: assets/fonts/BeVietnamPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/BeVietnamPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/BeVietnamPro-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/BeVietnamPro-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/BeVietnamPro-ExtraBold.ttf
+          weight: 800
+    - family: NotoSansArabic
+      fonts:
+        - asset: assets/fonts/NotoSansArabic-Variable.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSansArabic-Variable.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansArabic-Variable.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansArabic-Variable.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansArabic-Variable.ttf
+          weight: 800
